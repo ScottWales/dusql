@@ -7,7 +7,7 @@ jobs:
             TEST_OUTPUT: /tmp/artifacts
         steps:
             - checkout
-            - run: conda install conda-build conda-verify codecov black
+            - run: conda install -c conda-forge conda-build conda-verify codecov black
             - run: |
                 mkdir -p ${TEST_OUTPUT}
                 conda build .
